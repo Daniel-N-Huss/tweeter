@@ -1,14 +1,44 @@
 .new-tweet {
+  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  background-color: rosybrown;
+  justify-content: space-evenly;
 }
 
 
 #tweet-text {
+  width: 100%;
+  height: 1.5em;
+}
+
+
+
+.new-tweet-helper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5em;
+  font-family: 'Bungee', sans-serif;;
+
+}
+
+form {
   width: 90%;
-  height: 30px;
+  margin: 0em 1.5em;
+}
+
+form > textarea {
+  background: transparent;
+  border-color: transparent;
+  border-bottom-color: rgb(86, 82, 72);
+  border-bottom-width: 4px;
+
+}
+
+button {
+  background-color: #4056a1;
+  color: white;
+}
+
+form label {
+
 }
