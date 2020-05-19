@@ -7,8 +7,20 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- Fonts! -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav Bar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!--Profile Header-->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- New Tweet Form -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -21,9 +33,45 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div class="newTweet">
+        <b>Write</b> a new tweet
+       <!-- ADD THESE <span class="glyphicon glyphicon-chevron-down"></span>
+        <span class="glyphicon glyphicon-chevron-down"></span> -->
+
+      </div>
     </nav>
 
+    <header>
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>Adam Driver</h2>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <div class=tweet>
+        <h3>Oof, today could be better But here's some Kirk</h3>
+        <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.</p>
+      </div>
+      <div class=tweet>
+        <h3>HIPSTERIPY</h3>
+        <p>Kickstarter hell of nostrud sunt, hot chicken cold-pressed knausgaard banjo. Minim four dollar toast art party, 3 wolf moon kombucha copper mug cronut meh edison bulb enamel pin in chambray selvage. Organic jianbing portland, ad snackwave cornhole slow-carb eiusmod pop-up tumblr culpa taxidermy post-ironic. Labore succulents vegan lomo selvage consectetur ugh crucifix pabst brooklyn freegan locavore VHS. Hoodie est tacos nulla pork belly incididunt hashtag cloud bread farm-to-table lyft locavore.</p>
+      </div>
+
+    </main>
   </body>
 </html>
