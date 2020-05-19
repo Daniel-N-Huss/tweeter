@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #ffffff
+}
+
+nav span {
+
+  font-family: 'Bungee', sans-serif;
+  margin: 1.5em;
+}
+
+.newTweet {
+  margin: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+
+div span {
+  display: flex;
+  flex-direction: column;
+}

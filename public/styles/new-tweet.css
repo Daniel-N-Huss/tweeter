@@ -1,0 +1,14 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rosybrown;
+}
+
+
+#tweet-text {
+  width: 90%;
+  height: 30px;
+}
