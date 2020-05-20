@@ -85,7 +85,7 @@ const submitTweet = function(whatToSubmit) {
     .then(() => {
       $(whatToSubmit).val('');
       $('.tweet-container').empty();
-      //renderTweets(data);
+      renderTweets(data);
     });
 };
 
