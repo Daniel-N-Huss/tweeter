@@ -94,13 +94,10 @@ const submitTweet = function(whatToSubmit) {
 $(document).ready(function() {
   
   renderTweets(data);
+  
   $('.new-tweet').submit((event) => {
-    
     event.preventDefault();
-
     submitTweet('#tweet-text');
-    console.log( $('#tweet-text').serialize());
-
   });
 
 });
