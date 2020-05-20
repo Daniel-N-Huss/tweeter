@@ -14,8 +14,9 @@
   margin: 1em;
 }
 
-.tweet .hover {
-  box-shadow: rgb(197, 202, 230);
+.tweet.hover {
+  box-shadow: 10px 5px 5px rgb(197, 202, 230);
+  font-weight: bold;
 }
 
 .tweet header {
@@ -39,6 +40,10 @@
   margin-left: 1em;
 }
 
+.tweet footer .hover {
+  font-weight: bold;
+}
+
 .tweetContent {
   display: flex;
   flex-wrap: wrap;
@@ -47,19 +52,11 @@
   margin-left: 1em;
 }
 
-.tweet h1 {
-
-}
-
 .tweet h2 {
   visibility: hidden;
 }
 
-.tweet h2 .hover {
-  color: rgb(204, 207, 231);
+.tweet h2.hover {
   visibility: visible;
-}
-
-.tweet span {
-
+  color: rgb(204, 207, 231);
 }
