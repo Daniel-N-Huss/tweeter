@@ -1,5 +1,6 @@
 .new-tweet {
   height: 200px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -29,8 +30,8 @@ form {
 form > textarea {
   background: transparent;
   border-color: transparent;
-  border-bottom-color: rgb(86, 82, 72);
   border-bottom-width: 4px;
+  border-bottom-color: rgb(86, 82, 72);
 
 }
 
