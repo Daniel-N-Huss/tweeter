@@ -89,7 +89,6 @@ $(document).ready(function() {
   $('.new-tweet').submit((event) => {
     
     event.preventDefault();
-    
     console.log('hello from your submit button');
   });
 
