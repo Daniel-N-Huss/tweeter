@@ -12,19 +12,21 @@
   border-width: 4px;
   border-style: solid;
   margin: 1em;
+  font-weight: 300;
+
 }
 
 .tweet.hover {
   box-shadow: 10px 5px 5px rgb(197, 202, 230);
-  font-weight: bold;
+
 }
 
 .tweet header {
   width: 95%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-left: 0.5em;
+  align-content: center;
+  margin: 1em;
 }
 
 .tweet footer {
@@ -41,7 +43,7 @@
 }
 
 .tweet footer .hover {
-  font-weight: bold;
+  
 }
 
 .tweetContent {
@@ -52,8 +54,32 @@
   margin-left: 1em;
 }
 
+
+/* This needs attention --- why does making h1 bigger stretch the image weirdly? 
+How can i better space these out? */
+.leftAlignUserInfo {
+  width: 10%;
+  display: flex;
+
+}
+
+.tweet h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+
+}
+
+.tweet h1.hover {
+  
+}
+
 .tweet h2 {
   visibility: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+
 }
 
 .tweet h2.hover {
