@@ -20,7 +20,21 @@ const tweetData = {
 
 
 const calculateDisplayDate = function(postTime) {
-  const currentTime = new Date();
+  const currentTime = Date.now();
+  const difference = currentTime - postTime;
+  const calculatedDays = difference / (1000 * 3600 * 24);
+
+  if (calculatedDays <= 1) {
+    const calculatedHours = Math.round(calculatedDays * 24);
+    if (calculatedHours <= 1) {
+      return `Posted Recently`;
+    } else {
+      return `Posted ${calculatedHours} hours ago`;
+    }
+  } else {
+    return `Posted ${Math.round(calculatedDays)} ago`;
+  }
+
 };
 
 
@@ -38,7 +52,7 @@ const createTweetElement = function(data) {
           <p class='tweetContent'>${data.content.text}</p>
 
           <footer>
-            <span class='postDate'>100 Years Ago</span>
+            <span class='postDate'>${calculateDisplayDate(data['created_at'])}</span>
             <span class='actions'>FlagRetweetLoveGoHere</span>
           </footer>
         </article>    
