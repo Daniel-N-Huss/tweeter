@@ -32,7 +32,7 @@ const calculateDisplayDate = function(postTime) {
       return `Posted ${calculatedHours} hours ago`;
     }
   } else {
-    return `Posted ${Math.round(calculatedDays)} ago`;
+    return `Posted ${Math.round(calculatedDays)} days ago`;
   }
 
 };
@@ -44,7 +44,7 @@ const createTweetElement = function(data) {
           <header>
             <div class='leftAlignUserInfo'>
               <img class='profilePhoto' src="${data.user.avatars}">
-              <h1>${data.name}</h1>
+              <h1>${data.user.name}</h1>
             </div>
             <h2 class='userHandle'>${data.user.handle}</h2>
           </header>
@@ -57,9 +57,13 @@ const createTweetElement = function(data) {
           </footer>
         </article>    
     `);
-
+  return $tweet;
 };
 
+const $tweet = createTweetElement(tweetData);
+
+console.log($tweet);
+$('.tweet-container').append($tweet);
 
 
 
