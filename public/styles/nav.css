@@ -3,6 +3,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 120px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
   width: 100%;
   background-color: #4056a1;
   color: #ffffff
