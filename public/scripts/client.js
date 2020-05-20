@@ -30,7 +30,7 @@ const data = [
 ];
 
 
-
+//look at library:      momentjs 
 const calculateDisplayDate = function(postTime) {
   const currentTime = Date.now();
   const difference = currentTime - postTime;
@@ -72,15 +72,25 @@ const createTweetElement = function(data) {
   return $tweet;
 };
 
-// const $tweet = createTweetElement(tweetData);
-
-// console.log($tweet);
-// $('.tweet-container').append($tweet);
+// find fontawesome to apply styles
 
 const renderTweets = function(tweetArray) {
   tweetArray.forEach(tweet => {
-    $('.tweet-container').append(createTweetElement(tweet));
+    $('.tweet-container').prepend(createTweetElement(tweet));
   });
 };
 
-renderTweets(data);
+
+
+$(document).ready(function() {
+  
+  renderTweets(data);
+
+  $('.new-tweet').submit((event) => {
+    
+    event.preventDefault();
+    
+    console.log('hello from your submit button');
+  });
+
+});
