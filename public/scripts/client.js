@@ -80,16 +80,27 @@ const renderTweets = function(tweetArray) {
   });
 };
 
+const submitTweet = function(whatToSubmit) {
+  $.post('/tweets', $(whatToSubmit).serialize())
+    .then(() => {
+      $(whatToSubmit).val('');
+      $('.tweet-container').empty();
+      //renderTweets(data);
+    });
+};
+
 
 
 $(document).ready(function() {
   
   renderTweets(data);
-
   $('.new-tweet').submit((event) => {
     
     event.preventDefault();
-    console.log('hello from your submit button');
+
+    submitTweet('#tweet-text');
+    console.log( $('#tweet-text').serialize());
+
   });
 
 });
