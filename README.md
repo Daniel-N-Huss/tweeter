@@ -6,6 +6,13 @@ The focus is to develop HTML, CSS, JS, jQuery and AJAX front-end skills, and Nod
 
 Some fun features include a live character counter that arbitrarily limits tweets to 140 characters, some simple sliding animation to reveal the submission form, and different layouts that accomodate smaller screen sizes.
 
+
+## Screenshots
+
+!["Screenshot of main page layout for desktop"](https://github.com/Daniel-N-Huss/tweeter/blob/master/docs/Main%20view.png?raw=true)
+!["Screenshot showing responsive layout and error text / counter at work"](https://github.com/Daniel-N-Huss/tweeter/blob/master/docs/Responsive%20design%20and%20text%20counter%20at%20work.png?raw=true)
+
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
