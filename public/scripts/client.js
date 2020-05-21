@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//look at library:      momentjs 
+
 const calculateDisplayDate = function(postTime) {
   const currentTime = Date.now();
   const difference = currentTime - postTime;
@@ -44,7 +44,11 @@ const createTweetElement = function(data) {
 
           <footer>
             <span class='postDate'>${moment(data['created_at']).fromNow()}</span>
-            <span class='actions'>FlagRetweetLoveGoHere</span>
+            <span class='icons'> 
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </span>
           </footer>
         </article>    
     `);
