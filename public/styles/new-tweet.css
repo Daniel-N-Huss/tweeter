@@ -1,3 +1,4 @@
+/* Form styling for new tweet submission */
 .new-tweet {
   height: 200px;
   width: 100%;
@@ -12,7 +13,7 @@
 }
 
 
-
+/* helper class to align submit button and text counter */
 .new-tweet-helper {
   display: flex;
   justify-content: space-between;
@@ -38,10 +39,12 @@ button {
   color: white;
 }
 
+/* this changes the counter color red when above 140 characters*/
 form .error {
   color: red;
 }
 
+/* This is warning styling */
 .invalidSubmission {
   display: none;
   font-size: 0.5em;

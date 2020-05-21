@@ -12,7 +12,7 @@
     <!-- Fonts! -->
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
     
-    <!-- App CSS -->
+    <!-- Main App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- Font Awesome for Icons-->
@@ -42,36 +42,38 @@
       </div>
     </nav>
 
+    <!-- User header -->
     <div id="desktop-styler">
-
-    <header class="userHeader">
-      <div>
-        <img src="/images/profile-hex.png" id="userProfilePhoto">
-      </div>
-      <div>
-        <h2 id="userName">Daniel Huss</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="new-tweet-helper">
-            <button type="submit">Tweet</button>
-            <span class='invalidSubmission'>Whoops! Please make sure your tweet is 140 characters or less, and not empty!</span>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class='tweet-container'></section>
-    </main>
-
+      <header class="userHeader">
+        <div>
+          <img src="/images/profile-hex.png" id="userProfilePhoto">
+        </div>
+        <div>
+          <h2 id="userName">Daniel Huss</h2>
+        </div>
+      </header>
+      
+      <!-- Tweet content -->
+      <main class="container">
+        <section class="new-tweet">
+          <form method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="new-tweet-helper">
+              <button type="submit">Tweet</button>
+              <span class='invalidSubmission'>Whoops! Please make sure your tweet is 140 characters or less, and not empty!</span>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class='tweet-container'></section>
+      </main>
   </div>
   
 
   </body>
+
+  <!-- Here there be scripts, yarr -->
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -91,8 +93,5 @@
 
   <!-- Hovering Detection Driving Style Changes for Tweets -->
   <script type="text/javascript" src="/scripts/hover-tweets.js"></script>
-
-
-    
   
 </html>

@@ -1,12 +1,12 @@
 
-//Safety code to prevent code injection via form
+//Safety code to prevent code injection via form submit
 const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-// Function that creates our the structure of what will append to the DOM for each tweet
+// Creates structure of tweet content
 const createTweetElement = function(data) {
   const $tweet = $(
     `<article class="tweet">
@@ -33,14 +33,14 @@ const createTweetElement = function(data) {
   return $tweet;
 };
 
-// Prepending each tweet from the DB to our DOM
+// Prepend each tweet from the DB to our DOM
 const renderTweets = function(tweetArray) {
   tweetArray.forEach(tweet => {
     $('.tweet-container').prepend(createTweetElement(tweet));
   });
 };
 
-// ajax get req. and calling our render function on our received data
+// ajax get req. and calling our render function on tweet data
 const loadTweets = function() {
   $.get('/tweets', { dataType: 'json' }, function() {
   })
@@ -49,7 +49,7 @@ const loadTweets = function() {
     });
 };
 
-// Logic for handling submissions and stopping invalid submissions
+// Handler for submissions and stopping invalid submissions
 
 const submitTweet = function(whatToSubmit) {
   if ($(whatToSubmit).val() === '' || $(whatToSubmit).val().length > 140) {
@@ -60,7 +60,6 @@ const submitTweet = function(whatToSubmit) {
       .then(() => {
         $(whatToSubmit).val('');
         $('.counter').text(140);
-        //$('.tweet-container').empty();
         loadTweets();
       });
   }

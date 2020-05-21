@@ -1,3 +1,4 @@
+/* Setting up a container to hold all tweets */
 .tweet-container {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,7 @@
   width: 100%;
 }
 
+/* Specific styling for each tweet brought in */
 .tweet {
   display: flex;
   flex-direction: column;
@@ -16,14 +18,11 @@
 
 }
 
-.tweet.hover {
-  box-shadow: 10px 5px 5px rgb(197, 202, 230);
-
-}
 .tweet:hover {
   box-shadow: 10px 5px 5px rgb(197, 202, 230);
 }
 
+/* setting up each tweets header, for profile photo, name, and handle */
 .tweet header {
   width: 95%;
   display: flex;
@@ -32,6 +31,7 @@
   margin: 1em;
 }
 
+/* helper classes to manage left aligning some header items */ 
 .leftAlignUserInfo {
   width: 40%;
   display: flex;
@@ -43,6 +43,7 @@
   margin: 10px 10px 0 0;
 }
 
+/* Styling text for usernames */
 .tweet h1, h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: normal;
@@ -53,7 +54,7 @@
   color: rgb(204, 207, 231);
 }
 
-
+/* For the tweet text itself */
 .tweetContent {
   width: 90%;
   display: flex;
@@ -64,7 +65,7 @@
   margin-left: 50px;
 }
 
-
+/* Styling for each tweets footer displaying a border, time posted, and social icons */
 .tweet footer {
   width: 93%;
   display: flex;

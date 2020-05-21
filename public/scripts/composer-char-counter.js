@@ -6,6 +6,5 @@ $(document).ready(function() {
     $(counterViz).val(140 - count);
     $(counterViz).toggleClass('error', count > 140);
   }));
-  
 });
 
