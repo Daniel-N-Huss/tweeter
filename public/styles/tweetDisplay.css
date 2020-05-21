@@ -20,6 +20,10 @@
   box-shadow: 10px 5px 5px rgb(197, 202, 230);
 
 }
+.tweet:hover {
+  box-shadow: 10px 5px 5px rgb(197, 202, 230);
+}
+
 
 .tweet header {
   width: 95%;
@@ -55,8 +59,6 @@
 }
 
 
-/* This needs attention --- why does making h1 bigger stretch the image weirdly? 
-How can i better space these out? */
 .leftAlignUserInfo {
   width: 10%;
   display: flex;
@@ -86,11 +88,11 @@ How can i better space these out? */
   visibility: hidden;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1.5em;
 
 }
 
-.tweet h2.hover {
+.tweet:hover h2 {
   visibility: visible;
   color: rgb(204, 207, 231);
 }
