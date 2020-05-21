@@ -42,3 +42,9 @@ button {
 form .error {
   color: red;
 }
+
+.invalidSubmission {
+  visibility: hidden;
+  font-size: 0.5em;
+  color: red;
+}

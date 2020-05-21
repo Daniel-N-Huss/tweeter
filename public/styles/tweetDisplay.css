@@ -53,6 +53,7 @@
 .tweetContent {
   display: flex;
   flex-wrap: wrap;
+  overflow-wrap: break-word;
   width: 90%;
   padding-bottom: 1.5em;
   margin-left: 1em;
@@ -60,7 +61,7 @@
 
 
 .leftAlignUserInfo {
-  width: 10%;
+  width: 40%;
   display: flex;
 
 }
@@ -85,14 +86,13 @@
 }
 
 .tweet h2 {
-  visibility: hidden;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: normal;
   font-size: 1.5em;
-
-}
-
-.tweet:hover h2 {
-  visibility: visible;
   color: rgb(204, 207, 231);
 }
+
+/* .tweet:hover h2 {
+  visibility: visible;
+  color: rgb(204, 207, 231);
+} */

@@ -23,6 +23,11 @@ const calculateDisplayDate = function(postTime) {
 
 };
 
+const escape = function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = function(data) {
   const $tweet = $(
@@ -35,7 +40,7 @@ const createTweetElement = function(data) {
             <h2 class='userHandle'>${data.user.handle}</h2>
           </header>
 
-          <p class='tweetContent'>${data.content.text}</p>
+          <p class='tweetContent'>${escape(data.content.text)}</p>
 
           <footer>
             <span class='postDate'>${calculateDisplayDate(data['created_at'])}</span>
@@ -63,14 +68,20 @@ const loadTweets = function() {
 };
 
 const submitTweet = function(whatToSubmit) {
-  $.post('/tweets', $(whatToSubmit).serialize())
-    .then(() => {
-      $(whatToSubmit).val('');
-      $('.tweet-container').empty();
-      loadTweets();
-    });
+  if ($(whatToSubmit).val() === '' || $(whatToSubmit).val().length > 140) {
+    alert('Whoops. Invalid tweet. Either write more, or less that 140 characters!');
+  } else {
+    const cleansed = escape($(whatToSubmit).serialize());
+    console.log("submitTweet -> cleansed", cleansed)
+    
+    $.post('/tweets#submit', cleansed)
+      .then(() => {
+        $(whatToSubmit).val('');
+        //$('.tweet-container').empty();
+        loadTweets();
+      });
+  }
 };
-
 
 
 $(document).ready(function() {
