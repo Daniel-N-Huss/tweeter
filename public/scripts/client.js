@@ -76,10 +76,7 @@ const submitTweet = function(whatToSubmit) {
     $('span.invalidSubmission').slideDown();
   } else {
     $('span.invalidSubmission').slideUp();
-    const cleansed = escape($(whatToSubmit).serialize());
-    console.log("submitTweet -> cleansed", cleansed)
-    
-    $.post('/tweets#submit', cleansed)
+    $.post('/tweets', $(whatToSubmit).serialize())
       .then(() => {
         $(whatToSubmit).val('');
         //$('.tweet-container').empty();
