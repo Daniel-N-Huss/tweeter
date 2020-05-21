@@ -69,8 +69,9 @@ const loadTweets = function() {
 
 const submitTweet = function(whatToSubmit) {
   if ($(whatToSubmit).val() === '' || $(whatToSubmit).val().length > 140) {
-    alert('Whoops. Invalid tweet. Either write more, or less that 140 characters!');
+    $('span.invalidSubmission').slideDown();
   } else {
+    $('span.invalidSubmission').slideUp();
     const cleansed = escape($(whatToSubmit).serialize());
     console.log("submitTweet -> cleansed", cleansed)
     

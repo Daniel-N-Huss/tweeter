@@ -44,7 +44,11 @@ form .error {
 }
 
 .invalidSubmission {
-  visibility: hidden;
+  display: none;
   font-size: 0.5em;
   color: red;
+}
+
+.invalidSubmission.appear {
+  visibility: visible;
 }
