@@ -94,10 +94,18 @@ const submitTweet = function(whatToSubmit) {
 $(document).ready(function() {
   
   renderTweets(data);
-  
+
   $('.new-tweet').submit((event) => {
     event.preventDefault();
     submitTweet('#tweet-text');
   });
+
+  const loadTweets = function() {
+    $.get('/tweets', { dataType: 'json' }, function(result) {
+      console.log(result);
+    });
+  };
+
+  loadTweets();
 
 });
