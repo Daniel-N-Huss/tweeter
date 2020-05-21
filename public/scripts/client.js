@@ -43,7 +43,7 @@ const createTweetElement = function(data) {
           <p class='tweetContent'>${escape(data.content.text)}</p>
 
           <footer>
-            <span class='postDate'>${calculateDisplayDate(data['created_at'])}</span>
+            <span class='postDate'>${moment(data['created_at']).fromNow()}</span>
             <span class='actions'>FlagRetweetLoveGoHere</span>
           </footer>
         </article>    

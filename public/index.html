@@ -56,7 +56,7 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="new-tweet-helper">
             <button type="submit">Tweet</button>
-            <span class='invalidSubmission'>Whoops! Please make sure your tweet is less than 140 characters, or has something in it!</span>
+            <span class='invalidSubmission'>Whoops! Please make sure your tweet is 140 characters or less, and not empty!</span>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
@@ -67,6 +67,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Moment Package for Time-Since-Tweet display-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
