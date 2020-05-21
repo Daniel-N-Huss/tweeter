@@ -2,13 +2,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   height: 120px;
-
+  width: 100%;
+  
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-
-  width: 100%;
+  
   background-color: #4056a1;
   color: #ffffff
 }
@@ -37,10 +38,4 @@ nav span {
 
 #openNewTweet:hover {
   font-size: 1.3em;
-}
-
-
-div span {
-  display: flex;
-  flex-direction: column;
 }

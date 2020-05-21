@@ -5,23 +5,24 @@
  */
 
 
-const calculateDisplayDate = function(postTime) {
-  const currentTime = Date.now();
-  const difference = currentTime - postTime;
-  const calculatedDays = difference / (1000 * 3600 * 24);
+//        OLD DATE CODE
+// const calculateDisplayDate = function(postTime) {
+  // const currentTime = Date.now();
+  // const difference = currentTime - postTime;
+  // const calculatedDays = difference / (1000 * 3600 * 24);
 
-  if (calculatedDays <= 1) {
-    const calculatedHours = Math.round(calculatedDays * 24);
-    if (calculatedHours <= 1) {
-      return `Posted Recently`;
-    } else {
-      return `Posted ${calculatedHours} hours ago`;
-    }
-  } else {
-    return `Posted ${Math.round(calculatedDays)} days ago`;
-  }
+  // if (calculatedDays <= 1) {
+    // const calculatedHours = Math.round(calculatedDays * 24);
+    // if (calculatedHours <= 1) {
+      // return `Posted Recently`;
+    // } else {
+      // return `Posted ${calculatedHours} hours ago`;
+    // }
+  // } else {
+    // return `Posted ${Math.round(calculatedDays)} days ago`;
+  // }
 
-};
+// };
 
 const escape = function(str) {
   let div = document.createElement('div');
@@ -91,6 +92,7 @@ $(document).ready(function() {
 
   $('#openNewTweet').click(() => {
     $('.new-tweet').slideToggle();
+    $('#tweet-text').focus();
   });
 
   $('.new-tweet').submit((event) => {
