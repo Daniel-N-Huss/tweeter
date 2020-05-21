@@ -42,7 +42,9 @@
       </div>
     </nav>
 
-    <header>
+    <div id="desktop-styler">
+
+    <header class="userHeader">
       <div>
         <img src="/images/profile-hex.png" id="userProfilePhoto">
       </div>
@@ -65,6 +67,10 @@
       </section>
       <section class='tweet-container'></section>
     </main>
+
+  </div>
+  
+
   </body>
 
   <!-- External JS -->
@@ -72,6 +78,10 @@
 
   <!-- Moment Package for Time-Since-Tweet display-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+
+  <!-- Helper functions loaded before client JS code -->
+
+  <script type ="text/javascript" src="/scripts/helperFunctions.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>

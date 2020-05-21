@@ -34,8 +34,55 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-main {
+main .container {
   margin: 5px;
   padding-top: 10px;
   width: 90%;
+}
+
+@media screen and (max-width: 1023px) {
+  body>nav {
+    background-color: transparent;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .userHeader {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+
+  .container {
+    position: relative;
+    top: 400px;
+    left: 0px
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+  #desktop-styler {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  
+  }
+
+  .userHeader {
+    max-width: 33%;
+    border-radius: 50px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 155px;
+  }
+
+  .container {
+    flex: 2.5;
+    max-width: 60%;
+  }
 }
