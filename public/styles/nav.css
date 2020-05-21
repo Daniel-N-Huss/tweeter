@@ -14,7 +14,6 @@ nav {
 }
 
 nav span {
-
   font-family: 'Bungee', sans-serif;
   margin: 1.5em;
 }
@@ -37,7 +36,7 @@ nav span {
 }
 
 #openNewTweet:hover {
-  font-size: 1.25em;
+  font-size: 1.3em;
 }
 
 

@@ -55,8 +55,6 @@ const createTweetElement = function(data) {
   return $tweet;
 };
 
-// find fontawesome to apply styles
-
 const renderTweets = function(tweetArray) {
   tweetArray.forEach(tweet => {
     $('.tweet-container').prepend(createTweetElement(tweet));
