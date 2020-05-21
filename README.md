@@ -1,8 +1,10 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone focusing on front end, responsive design.  
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+The focus is to develop HTML, CSS, JS, jQuery and AJAX front-end skills, and Node / Express back-end skills, as part of the 4th week of Lighthouse Labs web development bootcamp.
+
+Some fun features include a live character counter that arbitrarily limits tweets to 140 characters, some simple sliding animation to reveal the submission form, and different layouts that accomodate smaller screen sizes.
 
 ## Getting Started
 
@@ -15,8 +17,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
-
-
-## Known Bugs: 
-
-<s>Submittings a long string with no spaces breaks the flexbox wrapping.</s>
+- Body Parser
+- Chance
+- md5
