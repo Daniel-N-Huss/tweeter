@@ -20,9 +20,24 @@ nav span {
 }
 
 .newTweet {
-  margin: 1.5em;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
+  margin: 1em;
+}
 
+#openNewTweet {
+  color: red;
+  position: relative;
+  bottom: 25px;
+  
+}
+
+#openNewTweet:hover {
+  font-size: 1.25em;
 }
 
 

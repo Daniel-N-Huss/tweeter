@@ -1,9 +1,8 @@
 .new-tweet {
   height: 200px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  padding-top: 2em;
+  display: none;
 }
 
 
@@ -47,8 +46,4 @@ form .error {
   display: none;
   font-size: 0.5em;
   color: red;
-}
-
-.invalidSubmission.appear {
-  visibility: visible;
 }

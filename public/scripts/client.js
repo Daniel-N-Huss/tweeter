@@ -93,10 +93,13 @@ $(document).ready(function() {
   
   loadTweets();
 
+  $('#openNewTweet').click(() => {
+    $('.new-tweet').slideToggle();
+  });
+
   $('.new-tweet').submit((event) => {
     event.preventDefault();
     submitTweet('#tweet-text');
   });
-
 
 });
