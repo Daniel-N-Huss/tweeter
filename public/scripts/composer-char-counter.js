@@ -1,7 +1,4 @@
 $(document).ready(function() {
-  
-  
-  
   $('#tweet-text').on('keyup change', (function() {
     let textArea = this;
     let count = $(textArea).val().length;

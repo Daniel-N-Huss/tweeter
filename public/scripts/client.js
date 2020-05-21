@@ -77,6 +77,7 @@ const submitTweet = function(whatToSubmit) {
     $.post('/tweets', $(whatToSubmit).serialize())
       .then(() => {
         $(whatToSubmit).val('');
+        $('.counter').text(140);
         //$('.tweet-container').empty();
         loadTweets();
       });
