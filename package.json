@@ -11,7 +11,6 @@
   "author": "Daniel Huss",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "body-parser": "^1.15.2",
     "chance": "^1.0.2",
     "express": "^4.13.4",
